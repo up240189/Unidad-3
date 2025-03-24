@@ -55,8 +55,66 @@ print(it_companies[-1])
 
 it_companies[0] = 'Meta'
 print(it_companies)
-
 it_companies.append('Twitter')
 print(it_companies)
 it_companies.insert(len(it_companies) // 2, 'Salesforce')
 print(it_companies)
+
+'''
+1. Find the middle country(ies) in the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/tree/master/data/countries.py)
+1. Divide the countries list into two equal lists if it is even if not one more country for the first half.
+1. ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
+'''
+
+paises = ['China', 'Rusia', 'USA', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']
+
+if len(paises) % 2 == 0:
+    paises_medio = paises[(len(paises) // 2) - 1:(len(paises) // 2) + 1]
+else:
+    paises_medio = [paises[len(paises) // 2]]
+print("País(es) del medio:", paises_medio)
+
+if len(paises) % 2 == 0:
+    primera_mitad = paises[:len(paises) // 2]
+    segunda_mitad = paises[len(paises) // 2:]
+else:
+    primera_mitad = paises[:len(paises) // 2 + 1]
+    segunda_mitad = paises[len(paises) // 2 + 1:]
+print("Primera mitad:", primera_mitad)
+print("Segunda mitad:", segunda_mitad)
+
+primer_pais, segundo_pais, tercer_pais, *paises_escandinavos = paises
+print("Primer país:", primer_pais)
+print("Segundo país:", segundo_pais)
+print("Tercer país:", tercer_pais)
+print("Países escandinavos:", paises_escandinavos)
+
+lista_vacia = []
+
+lista_con_mas_de_5 = [1, 2, 3, 4, 5, 6]
+print(len(lista_con_mas_de_5))
+
+primer_elemento = lista_con_mas_de_5[0]
+elemento_medio = lista_con_mas_de_5[len(lista_con_mas_de_5) // 2]
+ultimo_elemento = lista_con_mas_de_5[-1]
+print("Primer elemento:", primer_elemento)
+print("Elemento medio:", elemento_medio)
+print("Último elemento:", ultimo_elemento)
+
+mixed_data_types = ['TuNombre', 25, 1.75, 'Soltero', 'TuDirección']
+
+empresas_ti = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+print(empresas_ti)
+
+print(len(empresas_ti))
+
+print(empresas_ti[0])
+print(empresas_ti[len(empresas_ti) // 2])
+print(empresas_ti[-1])
+
+empresas_ti[0] = 'Meta'
+print(empresas_ti)
+empresas_ti.append('Twitter')
+print(empresas_ti)
+empresas_ti.insert(len(empresas_ti) // 2, 'Salesforce')
+print(empresas_ti)
